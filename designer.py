@@ -69,10 +69,4 @@ class Knuckle:
         self.sigma_c2 = self.load/(2*self.d1*self.t1)
         return True if self.sigma_c2 <= self.tensile_stress else False
 
-if __name__ == '__main__':
-    while True:
-        x = float(input("load in newtons: "))
-        y = float(input("yield strength in N/mm^2: "))
-        joint = Knuckle(x, y)
 
-        print(joint.dimensions())
