@@ -12,8 +12,11 @@ def roundup(x, y):
     return int(math.ceil(x/y))*y
 
 def standard(x):
-    if x<60 and x>25: return roundup(x,5)
-
+    if x<=60 and x>25: return roundup(x,5)
+    elif x>60 and x<110: return roundup(x,10)
+    elif x>110 and x<140: return roundup(x,15)
+    elif x>140 and x<500: return roundup(x,20)
+    else: return roundup(x,5)
 
 class Knuckle:
     def __init__(self, load, yield_strength, fos=None, tensile_stress=None, crushing_stress=None, shear_stress=None):
@@ -67,6 +70,9 @@ class Knuckle:
         return True if self.sigma_c2 <= self.tensile_stress else False
 
 if __name__ == '__main__':
-    joint = Knuckle(80000, 400)
-    print(joint.dimensions())
-    
+    while True:
+        x = float(input("load in newtons: "))
+        y = float(input("yield strength in N/mm^2: "))
+        joint = Knuckle(x, y)
+
+        print(joint.dimensions())
