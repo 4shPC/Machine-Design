@@ -14,7 +14,8 @@ def roundup(x, y):
 
 def standard(x):
     """Returns the standard sizes of shaft diameters"""
-    if x<=60 and x>25: return roundup(x,5)
+    if x<25: return roundup(x, 0.5)
+    elif x<=60 and x>25: return roundup(x,5)
     elif x>60 and x<110: return roundup(x,10)
     elif x>110 and x<140: return roundup(x,15)
     elif x>140 and x<500: return roundup(x,20)
@@ -41,7 +42,7 @@ class Knuckle:
         self.t = 1.25*self.d
         self.t1 = 0.75*self.d
         self.t2 = 0.5*self.d
-        # return f"{self.d, self.d1, self.d2, self.d3,self.t,self.t1, self.t2}"
+        return self.d, self.d1, self.d2, self.d3, self.t, self.t1, self.t2
 
     def pin_failure_in_shear(self):
         self.d1_ = math.sqrt((2*self.load)/(math.pi*self.shear_stress))
