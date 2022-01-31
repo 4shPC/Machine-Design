@@ -1,8 +1,30 @@
-# Machine Design
+# Machine-Design Library
 
-### Design of Knuckle Joint:
+A Python library making tedios calculations quick & easy 
 
-- Axial load,
-- Factor of Safety (not given will be assumed to be 5)
-- Yield Strength of the Material (Compressive yield and Tensile Yield will be assumed equal)
- 
+### Installing
+
+Download designer.py and move it into your project root
+
+Include into your project by importing designer
+```Python
+import designer
+
+part = designer.Knuckle(10.0, 8.0)
+```
+
+## Getting Started
+
+```wip```
+
+## Built With
+
+* [Python](https://www.python.org/) - The Underlying Programming Language
+
+## Authors
+
+* **GoodGuyAsh** - *Lib* - [GoodGuyAsh](https://github.com/GoodGuyAsh)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
