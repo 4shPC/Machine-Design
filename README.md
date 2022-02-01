@@ -1,6 +1,6 @@
 # Machine-Design Library
 
-A Python library making tedios calculations quick & easy 
+A Python library making tedious calculations quick & easy 
 
 ### Installing
 
